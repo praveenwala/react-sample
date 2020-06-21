@@ -1,0 +1,20 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-container {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }
+  .sideNav{
+      width: 200px;
+  }
+
+  table {
+    width: 100%;
+  }
+  
