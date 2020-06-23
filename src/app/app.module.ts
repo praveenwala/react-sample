@@ -8,13 +8,15 @@ import { RegistrationComponentComponent } from './registration-component/registr
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { CustomTableComponentComponent } from './custom-table-component/custom-table-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponentComponent,
     LoginComponentComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    CustomTableComponentComponent
   ],
   imports: [
     BrowserModule,
