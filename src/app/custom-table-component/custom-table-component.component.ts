@@ -1,13 +1,9 @@
+import { DataServiceService } from './../data-service.service';
+import { PeriodicElement } from './../entities/PeriodicElement';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit, Input } from '@angular/core';
 import {FormBuilder, AbstractControl} from '@angular/forms'
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
 
 
 
@@ -25,7 +21,7 @@ export class CustomTableComponentComponent implements OnInit {
   dataSource = new MatTableDataSource(this.tableMainData);
   readonly formControl: AbstractControl;
 
-  constructor(formBuilder: FormBuilder) {
+  constructor(formBuilder: FormBuilder,private dataserveice: DataServiceService) {
     
 
     this.formControl = formBuilder.group({
@@ -37,7 +33,7 @@ export class CustomTableComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.dataSource = new MatTableDataSource(this.tableMainData);
+    
     this.dataSource.filterPredicate = ((data, filter) => {
       const a = !filter.position || data.position === filter.position;
       const b = !filter.name || data.name.toLowerCase().includes(filter.name);
@@ -51,6 +47,12 @@ export class CustomTableComponentComponent implements OnInit {
       console.log("Filter--"+filter);
       this.dataSource.filter = filter;
     });
+
+    this.dataserveice.dataChangedEmitter.subscribe((data:PeriodicElement[]) => {
+      this.dataSource = new MatTableDataSource(data);
+    })
   }
+
+
 
 }

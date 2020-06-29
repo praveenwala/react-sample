@@ -1,3 +1,4 @@
+import { DataServiceService } from './data-service.service';
 import { DemoMaterialModule } from './material-module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -24,7 +25,7 @@ import { CustomTableComponentComponent } from './custom-table-component/custom-t
     BrowserAnimationsModule,
     DemoMaterialModule
   ],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
