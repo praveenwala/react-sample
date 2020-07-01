@@ -37,3 +37,27 @@
   .btn-layout-top {
       margin-top: 1%;
   }
+  .search-container {
+    
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   width: 80%;
+  
+   
+
+}
+
+.search-input {
+    width: 100%;
+   
+}
+.search-input-form {
+    width: 100%;
+    border-style: solid;
+    border-color: darkgrey;
+    border-width: 1px;
+    margin-top: 1%;
+    height: 40px;
+}
