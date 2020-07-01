@@ -1,0 +1,39 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .form-head-layout {
+      margin-top: 1%;
+      margin-bottom: 1%;
+  }
+
+  .space-container {
+      margin-top: 2%;
+      margin-bottom: 2%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: auto;
+     width: 80%;
+     
+
+  }
+
+  .item-view {
+      width: 33%;
+  }
+  .btn-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .btn-view-margin {
+    
+    margin-right: 1%;
+
+  }
+  .btn-layout-top {
+      margin-top: 1%;
+  }

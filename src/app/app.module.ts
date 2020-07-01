@@ -10,6 +10,7 @@ import { LoginComponentComponent } from './login-component/login-component.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { CustomTableComponentComponent } from './custom-table-component/custom-table-component.component';
+import { FormheaderComponent } from './view/formheader/formheader.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CustomTableComponentComponent } from './custom-table-component/custom-t
     RegistrationComponentComponent,
     LoginComponentComponent,
     HomeComponentComponent,
-    CustomTableComponentComponent
+    CustomTableComponentComponent,
+    FormheaderComponent
   ],
   imports: [
     BrowserModule,

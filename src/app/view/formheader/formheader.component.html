@@ -1,0 +1,77 @@
+<div class="row form-head-layout">
+<div class="example-container space-container">
+    <mat-form-field class="item-view" hintLabel="Max 10 characters"  appearance="fill">
+      <mat-label>Enter DataSource ID</mat-label>
+      <input matInput #input maxlength="10" placeholder="Ex. Nougat">
+      <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+    </mat-form-field>
+  
+    <mat-form-field class="item-view" appearance="fill">
+      <mat-label>Select Project ID</mat-label>
+      <mat-select>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+      <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field  class="item-view" appearance="fill">
+        <mat-label>Select Query ID</mat-label>
+        <mat-select>
+          <mat-option value="option">Option</mat-option>
+        </mat-select>
+        <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+      </mat-form-field>
+  </div>
+
+  <div class="example-container space-container">
+    
+  
+    <mat-form-field class="item-view" appearance="fill">
+      <mat-label>Select Occurence ID</mat-label>
+      <mat-select>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+      <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="item-view" hintLabel="Max 10 characters"  appearance="fill">
+        <mat-label>Enter DS Location</mat-label>
+        <input matInput #input maxlength="10" placeholder="Ex. Nougat">
+        <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="item-view" hintLabel="Max 10 characters"  appearance="fill">
+        <mat-label>Enter DS Connection String</mat-label>
+        <input matInput #input maxlength="10" placeholder="Ex. Nougat">
+        <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+      </mat-form-field>
+
+    
+  </div>
+
+  <div class="example-container space-container">
+    <mat-form-field class="item-view" hintLabel="Max 10 characters"  appearance="fill">
+      <mat-label>File Name</mat-label>
+      <input matInput #input maxlength="10" placeholder="Ex. Nougat">
+      <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+    </mat-form-field>
+  
+    <mat-checkbox class="item-view example-container space-container">
+        Recurring Data
+      </mat-checkbox>
+
+    <div class="item-view" appearance="fill">
+        
+    </div>
+    
+  </div>
+
+  <div class="row btn-view btn-layout-top">
+    <button class="btn-view-margin" mat-raised-button>Add</button>
+    <button class="btn-view-margin" mat-raised-button>Edit</button>
+    <button class="btn-view-margin" mat-raised-button>Delete</button>
+    <button class="btn-view-margin" mat-raised-button>Save</button>
+    <button class="btn-view-margin" mat-raised-button>Cancel</button>
+  </div>
+
+</div>

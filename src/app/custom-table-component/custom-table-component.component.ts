@@ -34,12 +34,7 @@ export class CustomTableComponentComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.dataSource.filterPredicate = ((data, filter) => {
-      const a = !filter.position || data.position === filter.position;
-      const b = !filter.name || data.name.toLowerCase().includes(filter.name);
-      const c = !filter.symbol || data.symbol === filter.symbol;
-      return a && b && c;
-    }) as (PeriodicElement, string) => boolean;
+    
 
     this.formControl.valueChanges.subscribe(value => {
       console.log("Value--"+value)
@@ -50,6 +45,13 @@ export class CustomTableComponentComponent implements OnInit {
 
     this.dataserveice.dataChangedEmitter.subscribe((data:PeriodicElement[]) => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.filterPredicate = ((data, filter) => {
+        const a = !filter.position || data.position === filter.position;
+        const b = !filter.name || data.name.toLowerCase().includes(filter.name);
+        const c = !filter.symbol || data.symbol === filter.symbol;
+        return a && b && c;
+      }) as (PeriodicElement, string) => boolean;
+
     })
   }
 
